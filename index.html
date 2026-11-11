@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Victorino | Portfólio</title>
+    <style>
+        /* Reset e Estilos Globais */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117; /* Fundo escuro estilo GitHub */
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Layout Principal */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Cabeçalho (Hero) */
+        header { margin-bottom: 60px; }
+        .terminal-window {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .terminal-header { display: flex; gap: 8px; margin-bottom: 15px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+        
+        .command-line { color: #7ee787; margin-bottom: 10px; }
+        .command-line span { color: #79c0ff; }
+        h1 { color: #ffffff; font-size: 2.5rem; margin: 10px 0; }
+        .subtitle { color: #8b949e; font-size: 1.2rem; margin-bottom: 20px; }
+
+        /* Seções */
+        section { margin-bottom: 50px; }
+        h2 { 
+            color: #58a6ff; 
+            border-bottom: 1px solid #30363d; 
+            padding-bottom: 10px; 
+            margin-bottom: 20px; 
+        }
+        
+        /* Grid de Habilidades */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .skill-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .skill-card:hover { transform: translateY(-5px); border-color: #58a6ff; }
+        
+        /* Grid de Projetos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+        .project-card:hover { border-color: #7ee787; }
+        .project-card h3 { color: #ffffff; margin-bottom: 10px; }
+        .project-card p { color: #8b949e; font-size: 0.9rem; margin-bottom: 15px; }
+
+        /* Rodapé */
+        footer { text-align: center; color: #8b949e; padding-top: 20px; border-top: 1px solid #30363d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header com estilo Terminal -->
+        <header>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="command-line">$ whoami</div>
+                <h1>Gustavo Victorino</h1>
+                <p class="subtitle">Estudante de ADS | Desenvolvedor Júnior em Formação (C# / .NET)</p>
+                <div class="command-line">$ cat status.txt</div>
+                <p>Em transição de carreira para TI, trazendo resiliência, disciplina e atenção aos detalhes da área da saúde para o desenvolvimento de software.</p>
+            </div>
+        </header>
+
+        <!-- Sobre Mim -->
+        <section id="sobre">
+            <h2># Sobre Mim</h2>
+            <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e estou em transição de carreira para a área de Tecnologia. Minha bagagem como Técnico de Enfermagem me proporcionou uma base sólida em resiliência, trabalho sob pressão e atenção minuciosa aos detalhes — competências que hoje aplico diretamente na escrita de um código limpo e na resolução de problemas complexos.</p>
+            <br>
+            <p>Atualmente, aprofundo meus conhecimentos em desenvolvimento back-end com <strong>C# e .NET</strong>, aplicando conceitos de POO, lógica de programação e metodologias ágeis (Scrum). Busco minha primeira oportunidade como Estagiário ou Desenvolvedor Júnior.</p>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades">
+            <h2># Stack & Tecnologias</h2>
+            <div class="skills-grid">
+                <div class="skill-card">C# / .NET</div>
+                <div class="skill-card">Lógica de Programação</div>
+                <div class="skill-card">POO (Orientação a Objetos)</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">HTML5 & CSS3</div>
+                <div class="skill-card">Metodologia Scrum</div>
+                <div class="skill-card">Python (Data & Automação)</div>
+                <div class="skill-card">Streamlit & Plotly</div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos">
+            <h2># Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Painel do Dono</h3>
+                    <p>Dashboard financeiro completo com ETL automatizado, banco de dados SQLite, gráficos interativos com Plotly e um consultor integrado com a IA do Google Gemini.</p>
+                    <a href="https://github.com/sug-bit/Painel-do-Dono" target="_blank">Ver no GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Sistema de Triagem</h3>
+                    <p>Sistema automatizado de triagem desenvolvido em Python, focado em otimização de processos.</p>
+                    <a href="https://github.com/sug-bit/sistema-triagem-python" target="_blank">Ver no GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Modelo de Site Gamer</h3>
+                    <p>Interface web responsiva construída com HTML5 e CSS3, focada em design moderno e experiência do usuário.</p>
+                    <a href="https://github.com/sug-bit/modelo-de-site-gamer" target="_blank">Ver no GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato">
+            <h2># Contato</h2>
+            <p>Vamos conversar? Estou aberto a oportunidades de estágio e posições júnior.</p>
+            <br>
+            <p>
+                📧 <a href="mailto:gustavo.b.victorino@gmail.com">gustavo.b.victorino@gmail.com</a><br>
+                💼 <a href="https://www.linkedin.com/in/gustavo-victorino/" target="_blank">LinkedIn</a><br>
+                🐙 <a href="https://github.com/sug-bit" target="_blank">GitHub</a>
+            </p>
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>© 2025 Gustavo Victorino. Construído com dedicação e disciplina.</p>
+        </footer>
+    </div>
+</body>
+</html>
